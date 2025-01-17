@@ -1,11 +1,9 @@
-# Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
 on:
   # Runs on pushes targeting the default branch
   push:
     branches: ['main']
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -41,6 +39,9 @@ jobs:
         run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          enablement: 'repo' 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
