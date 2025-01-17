@@ -1,0 +1,34 @@
+*{
+    text-decoration: none;
+    color: #fff;
+    list-style: none;
+}
+
+.navBar{
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    width: 100vw;
+    height: 60px;
+    background: linear-gradient(90deg, black 0%, rgba(0, 0, 0, 0.5) 50%);
+    position: fixed;
+}
+
+.containerNav {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.navBar ul{
+    display: flex;
+    gap: 20px;
+}
+
+.navBar ul li a{
+    color: #fff;
+
+}

@@ -1,0 +1,111 @@
+{
+  "usuarios": [
+    {
+      "user": "elfar@edutecno.com",
+      "pass": 123
+    },
+    {
+      "user": "salome@edutecno.com",
+      "pass": 456
+    },
+    {
+      "user": "nubia@edutecno.com",
+      "pass": 789
+    }
+  ],
+  "nosotros": {
+    "carrousel": [
+      {
+        "titulo": "Crema Barceló",
+        "imagen": "https://www.yopongoelhielo.com/735/barcelo-cream.jpg"
+      },
+      {
+        "titulo": "Pacharán Otaola",
+        "imagen": "https://www.yopongoelhielo.com/6295/pacaharan-caserootaola.jpg"
+      },
+      {
+        "titulo": "Amareto Disaronno",
+        "imagen": "https://www.yopongoelhielo.com/239/amaretto-disaronno.jpg"
+      },
+      {
+        "titulo": "Limoncello Villa Massa",
+        "imagen": "https://www.yopongoelhielo.com/1890/villa-massa.jpg"
+      },
+      {
+        "titulo": "Absenta Black",
+        "imagen": "https://www.yopongoelhielo.com/2636/absenta-black-80.jpg"
+      },
+      {
+        "titulo": "Anis Asturiana Dulce",
+        "imagen": "https://www.yopongoelhielo.com/1553/anis-asturiana-dulce.jpg"
+      }
+    ],
+    "tiposlicores": [
+      {
+        "nombre": "Chartreuse",
+        "texto": "El licor de hierbas Chartreuse Amarillo es una bebida espirituosa de origen francés que se elabora a partir de una receta secreta de monjes cartujos desde hace más de 400 años. Este licor es conocido por su sabor dulce y suave, con notas de miel, hierbas y especias.",
+        "imagen": "https://www.yopongoelhielo.com/722/chartreuse-amarillo.jpg"
+      },
+      {
+        "nombre": "Jagermeister",
+        "texto": "Producido en la ciudad de Wolfenbüttel, Alemania, Jägermeister deriva de 56 hierbas, especias, frutas y raíces de todo el mundo y se está volviendo muy popular en todo el mundo. ",
+        "imagen": "https://www.yopongoelhielo.com/2093-thickbox_default/jagermeister.jpg"
+      },
+      {
+        "nombre": "Grand Marnier",
+        "texto": "Grand Marnier es un licor triple seco que todavía se produce por la misma familia en Francia. La empresa se jacta de que es el licor más exportado de Francia, además de ser el primer licor exportados desde ese país. Se vende en más de 150 países y se utiliza en una amplia variedad de bebidas y postres.",
+        "imagen": "https://www.yopongoelhielo.com/258/grand-marnier-rojo.jpg"
+      }
+    ]
+  },
+  "licores": [
+    {
+      "id": "1234",
+      "nombre": "Crema de Whisky Baileys",
+      "descripcion": "Bebida con gran cuerpo y suavidad a base de malta escocesa original, para tomar sola, mezclar con café o como ingrediente para cócteles y  repostería.",
+      "grados": "17%",
+      "precio": 25000,
+      "imagen": "https://www.yopongoelhielo.com/1422/baileys.jpg"
+    },
+    {
+      "id": "5678",
+      "nombre": "Crema de Fresa con Tequila",
+      "descripcion": "Una crema de fresa y tequila suave y fresquita para disfrutarla en cualquier momento y lugar.",
+      "grados": "17%",
+      "precio": 14000,
+      "imagen": "https://www.yopongoelhielo.com/5719/maxica-crema-de-fresa-contequila.jpg"
+    },
+    {
+      "id": "9012",
+      "nombre": "Licor de Hierbas Ruavieja",
+      "descripcion": "El licor de hierbas Ruavieja es una bebida alcohólica de alta calidad que se elabora con una cuidadosa selección de hierbas y especias.",
+      "grados": "30%",
+      "precio": 24000,
+      "imagen": "https://www.yopongoelhielo.com/5323/licor-hierbas-ruavieja.jpg"
+    },
+    {
+      "id": "3456",
+      "nombre": "Licor de Hierbas Terras Celtas",
+      "descripcion": "Terras Celtas Licor de Hierbas es un licor tradicional gallego, elaborado a partir de una cuidada selección de hierbas aromáticas y aguardiente de orujo.",
+      "grados": "30%",
+      "precio": 16000,
+      "imagen": "https://www.yopongoelhielo.com/6863/terras-celtas-licor-dehierbas.jpg"
+    },
+    {
+      "id": "7890",
+      "nombre": "Meloncello Crema Cantalupo",
+      "descripcion": "Crema Meloncello Dimarco es un licor italiano cremoso con alcohol, elaborado a partir de melón cantalupo.",
+      "grados": "17%",
+      "precio": 10000,
+      "imagen": "https://www.yopongoelhielo.com/6451/meloncello-cremacantalupo.jpg"
+    },
+    {
+      "id": "9876",
+      "nombre": "Frangelico",
+      "descripcion": "Un licor de avellana con sabor principalmente de la destilación de la infusión de avellanas tostadas en alcohol y agua.",
+      "grados": "20%",
+      "precio": 13000,
+      "imagen": "https://www.yopongoelhielo.com/244/frangelico.jpg"
+    }
+  ]
+}
