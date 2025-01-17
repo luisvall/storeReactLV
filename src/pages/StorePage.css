@@ -1,9 +1,8 @@
-.storeTittle{
-    padding-bottom: 20px;
-}
-.products{
+p{color: blueviolet;}
+
+.containerProducts{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-    grid-template-rows: clamp(380px, 400px, 50vh);
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: 400px;
+    gap: 25px;
 }

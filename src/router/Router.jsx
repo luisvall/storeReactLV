@@ -30,6 +30,5 @@ export function Router({
   
   const routesToUse = routes.concat(routesFromChildren);
   const Page = routesToUse.find(({ path }) => path === currentPath)?.Component;
-  console.log(routesToUse)
   return Page ? <Page/> : <DefaultComponent />;
 }

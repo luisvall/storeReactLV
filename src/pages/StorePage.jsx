@@ -1,28 +1,31 @@
-import ProductCard from "../components/ProductCard";
-import { consumoApi } from "../components/api";
-import'./StorePage.css'
+import ProductCard from "../storeComponents/ProductCard";
+import Filters from "../storeComponents/Filters";
+import Cart from "../storeComponents/Cart";
+import { CartContext } from "../storeComponents/CartContext";
+import { filterProducts } from "../storeComponents/filterHook";
+import "./StorePage.css";
+import { useContext } from "react";
 
-export default function StorePage() {
-  const licores = consumoApi()[1];
-  //console.log(licores);
-
-  const renderLicores = licores.map((licor) => (
-    <ProductCard
-      key={licor.id}
-      img={licor.imagen}
-      tittle={licor.nombre}
-      desc={licor.descripcion}
-      price={licor.precio}
-      id={licor.id}
-    />
-  ));
+export default function StorePage({ products }) {
+  const filteredProducts = filterProducts(products);
+  const { addCart } = useContext(CartContext);
 
   return (
-    <section className="section productSection">
-      <div className="container">
-        <h1 className="storeTittle">Store</h1>
-        <div className="products">{renderLicores}</div>
+    <>
+      <br /><br /><br />
+      <Cart></Cart>
+      <Filters products={products}></Filters>
+      <div className="container containerProducts">
+        {filteredProducts.map((product) => {
+          return (
+            <ProductCard
+              product={product}
+              key={product.id}
+              addCart={addCart}
+            ></ProductCard>
+          );
+        })}
       </div>
-    </section>
+    </>
   );
 }
