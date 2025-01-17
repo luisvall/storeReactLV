@@ -14,9 +14,10 @@ export default function App() {
   const [isLoged, setIsLoged] = useState(!true);
   return (
     <>
+    <HomePage></HomePage>
       <Suspense fallback={<div>Loading...</div>}>
         <Router defaultComponent={DefaultComponent}>
-          <Route path="\" Component={HomePage} />
+          <Route path="/" Component={HomePage} />
 
           {isLoged ? (
             <Route
