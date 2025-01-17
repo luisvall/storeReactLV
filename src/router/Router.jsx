@@ -1,4 +1,4 @@
-import { useEffect, useState, Children, lazy } from "react";
+import { useEffect, useState, Children } from "react";
 import navigationEvent from "../components/const";
 
 export const routes = [];
@@ -25,10 +25,12 @@ export function Router({
   const routesFromChildren = Children.map(children, ({ props, type }) => {
     const { name } = type;
     const isRoute = name === "Route";
+
     return isRoute ? props : null;
   });
   
   const routesToUse = routes.concat(routesFromChildren);
   const Page = routesToUse.find(({ path }) => path === currentPath)?.Component;
+  console.log(routesToUse)
   return Page ? <Page/> : <DefaultComponent />;
 }

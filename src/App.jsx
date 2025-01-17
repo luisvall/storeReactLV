@@ -1,13 +1,13 @@
 import { lazy, Suspense, useState } from "react";
-import DefaultComponent from "../pages/404";
-import { Router } from "../router/Router";
-import Route from "../router/Route";
-import HomePage from "../pages/HomePage";
-import { CartProvider } from "./storeComponents/CartContext";
-import { consumoApi } from "./api";
-const StorePage = lazy(() => import("../pages/StorePage"));
-const ContactPage = lazy(() => import("../pages/ContactPage"));
-const LoginPage = lazy(() => import("../pages/LoginPage"));
+import DefaultComponent from "./pages/404";
+import { Router } from "./router/Router";
+import Route from "./router/Route";
+import HomePage from "./pages/HomePage";
+import { CartProvider } from "./components/storeComponents/CartContext";
+import { consumoApi } from "./components/api";
+const StorePage = lazy(() => import("./pages/StorePage"));
+const ContactPage = lazy(() => import("./pages/ContactPage"));
+const LoginPage = lazy(() => import("./pages/LoginPage"));
 
 export default function App() {
   const licores = consumoApi()[1];
@@ -16,11 +16,11 @@ export default function App() {
     <>
       <Suspense fallback={<div>Loading...</div>}>
         <Router defaultComponent={DefaultComponent}>
-          <Route path="/" Component={HomePage} />
+          <Route path="\" Component={HomePage} />
 
           {isLoged ? (
             <Route
-              path="/store"
+              path="/store/"
               Component={() => {
                 return (
                   <CartProvider>
@@ -33,9 +33,9 @@ export default function App() {
             <DefaultComponent />
           )}
 
-          <Route path="/contact" Component={ContactPage} />
+          <Route path="/contact/" Component={ContactPage} />
           <Route
-            path="/login"
+            path="/login/"
             Component={() => <LoginPage changeToken={setIsLoged} />}
           />
         </Router>
