@@ -1,8 +1,8 @@
-import ProductCard from "../storeComponents/ProductCard";
-import Filters from "../storeComponents/Filters";
-import Cart from "../storeComponents/Cart";
-import { CartContext } from "../storeComponents/CartContext";
-import { filterProducts } from "../storeComponents/filterHook";
+import ProductCard from "../components/storeComponents/ProductCard";
+import Filters from "../components/storeComponents/Filters";
+import Cart from "../components/storeComponents/Cart";
+import { CartContext } from "../components/storeComponents/CartContext";
+import { filterProducts } from "../components/storeComponents/filterHook";
 import "./StorePage.css";
 import { useContext } from "react";
 

@@ -3,7 +3,7 @@ import DefaultComponent from "../pages/404";
 import { Router } from "../router/Router";
 import Route from "../router/Route";
 import HomePage from "../pages/HomePage";
-import { CartProvider } from "../storeComponents/CartContext";
+import { CartProvider } from "./storeComponents/CartContext";
 import { consumoApi } from "./api";
 const StorePage = lazy(() => import("../pages/StorePage"));
 const ContactPage = lazy(() => import("../pages/ContactPage"));
