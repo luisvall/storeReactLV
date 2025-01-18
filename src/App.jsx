@@ -44,6 +44,7 @@ export default function App() {
           />
         </Router>
       </Suspense>
+      <button onClick={()=>{setIsLoged(true)}}>revisar token</button>
     </>
   );
 }
