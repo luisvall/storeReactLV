@@ -27,7 +27,7 @@ export default function LoginPage() {
     <section className="section">
       <div className="container containerCenter">
         <form className="loginForm" onSubmit={handleSubmit}>
-          <h1>{isLoged?'Login...':'Logeado'}</h1>
+          <h1>{ isLoged ? 'Logeado' : 'Login...' }</h1>
           <div className="loginAvatar">
             <img
               className="loginAvatar"
