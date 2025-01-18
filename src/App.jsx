@@ -13,7 +13,7 @@ const LoginPage = lazy(() => import("./pages/LoginPage"));
 export default function App() {
   const licores = consumoApi()[1];
   const { isLoged } = useContext(LogContext);
-  console.log(isLoged);
+  //console.log(isLoged);
 
   return (
     <>

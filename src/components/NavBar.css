@@ -10,8 +10,10 @@
     display: flex;
     width: 100vw;
     height: 60px;
-    background: linear-gradient(90deg, black 0%, rgba(0, 0, 0, 0.5) 50%);
+    background: linear-gradient(90deg, black 0%, rgba(0, 0, 0, 0.8) 50%);
     position: fixed;
+    z-index: 2;
+    backdrop-filter: blur(6px);
 }
 
 .containerNav {

@@ -1,24 +1,28 @@
 import { useEffect, useState } from "react";
+import LoginPage from "../pages/LoginPage";
+import HomePage from "../pages/HomePage";
+import StorePage from "../pages/StorePage";
 
 export function consumoApi() {
   const [userApi, setUserApi] = useState([]);
   const [productApi, setProductApi] = useState([]);
-  
+  const [bannerApi, setBannerApi] = useState([]);
+
   useEffect(() => {
     async function apiResponse() {
       try {
-        const resp = await fetch("https://apimocha.com/licores/posts");
+        const resp = await fetch("https://apimocha.com/produclicores/posts");
         const jsonRsp = await resp.json();
-        setUserApi(jsonRsp.usuarios)
-        setProductApi(jsonRsp.licores)
+          setUserApi(jsonRsp.usuarios);
+          setProductApi(jsonRsp.licores);
+          setBannerApi(jsonRsp.nosotros.carrousel);
+          console.log([userApi, productApi, bannerApi]);
       } catch (err) {
         console.log(err);
       }
     }
     apiResponse();
-  }, []);
-  return [userApi, productApi]
+
+  }, [HomePage, LoginPage, StorePage]);
+  return [userApi, productApi, bannerApi];
 }
-
-
-

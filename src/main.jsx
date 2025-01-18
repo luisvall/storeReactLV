@@ -7,12 +7,10 @@ import { FilterProvider } from "./components/storeComponents/FilterContext";
 import { LogProvider } from "./components/LogContext";
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <LogProvider>
-      <NavBar></NavBar>
-      <FilterProvider>
-        <App></App>
-      </FilterProvider>
-    </LogProvider>
-  </StrictMode>
+  <LogProvider>
+    <NavBar></NavBar>
+    <FilterProvider>
+      <App></App>
+    </FilterProvider>
+  </LogProvider>
 );

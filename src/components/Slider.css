@@ -1,0 +1,53 @@
+.slider {
+  display: flex;
+  width: 100vw;
+  height: 400px;
+  position: relative;
+  background-color: rgb(187, 187, 187);
+}
+
+.sliderSpan {
+  font-size: 100px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  transform: translateY(150px);
+  animation: bounce 5s forwards;
+}
+
+.sliderImg {
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 0.8;
+  filter: saturate(0);
+  transition: all 0.5s ease;
+}
+
+.sliderImg:hover {
+  cursor: pointer;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+  filter: saturate(1);
+}
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
