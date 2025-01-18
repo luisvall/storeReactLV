@@ -85,3 +85,7 @@ button:focus-visible {
   padding-bottom: 30px;
   padding-top: 10px;
 }
+
+@media (max-width:500px) {
+  
+}

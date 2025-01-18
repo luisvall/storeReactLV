@@ -94,3 +94,9 @@
 .cartItem-price{
     font-size: 14px;
 }
+
+@media (max-width:500px) {
+    .cartBtn, .cartAside{
+        top: 100px;
+    }
+}
