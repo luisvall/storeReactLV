@@ -4,7 +4,7 @@ import { consumoApi } from "../components/api";
 import { LogContext } from "../components/LogContext";
 
 export default function LoginPage() {
-  const {setIsLoged} = useContext(LogContext)
+  const {setIsLoged, isLoged} = useContext(LogContext)
   const usersAPI = consumoApi()[0];
 
   function handleSubmit(event) {
@@ -27,7 +27,7 @@ export default function LoginPage() {
     <section className="section">
       <div className="container containerCenter">
         <form className="loginForm" onSubmit={handleSubmit}>
-          <h1>Login...</h1>
+          <h1>{isLoged?'Login...':'Logeado'}</h1>
           <div className="loginAvatar">
             <img
               className="loginAvatar"
