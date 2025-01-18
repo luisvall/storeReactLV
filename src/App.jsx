@@ -39,13 +39,6 @@ export default function App() {
           )}
 
           <Route type="Route" path="/login" Component={LoginPage} />
-          <button
-            onClick={() => {
-              setIsLoged(true);
-            }}
-          >
-            revisar token
-          </button>
         </Router>
       </Suspense>
     </>
