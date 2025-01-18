@@ -63,7 +63,6 @@ button:focus-visible {
 }
 
 
-
 .container {
   max-width: 1000px;
   margin: auto;
@@ -86,6 +85,3 @@ button:focus-visible {
   padding-top: 10px;
 }
 
-@media (max-width:500px) {
-  
-}

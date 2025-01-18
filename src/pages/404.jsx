@@ -3,9 +3,11 @@ export default function DefaultComponent() {
   return (
     <>
       <section className="section">
-        <h1>404</h1>
-        <h2>Pagina no encontrada</h2>
+        <div className="container">
+        <h2>Necesitas iniciar sesión para ver los productos</h2>
+        <p>usuario: elfar@edutecno.com, contraseña: 123</p>
         <Link to={"/"}>Volver a la home</Link>
+        </div>
       </section>
     </>
   );
