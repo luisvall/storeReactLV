@@ -19,11 +19,11 @@ Inicio de Sesión: Introduce las credenciales mencionadas y haz clic en el botó
 
 Pantalla de Productos: Una vez logueado, podrás explorar una lista de productos obtenidos dinámicamente desde una API mockeada con Mocha API.
 
-[ ] Filtra los productos según tus necesidades.
+[ ] Filtra los productos según tus necesidades.  
 [ ] Selecciona productos para añadirlos al carrito.
 
 Carrito de Compras:
-[ ] Visualiza los productos seleccionados en el carrito.
-[ ] Ajusta las cantidades de cada producto.
-
+[ ] Visualiza los productos seleccionados en el carrito.  
+[ ] Ajusta las cantidades de cada producto.  
+  
 Slider Dinámico: Explora un slider en la página de inicio con imágenes cargadas desde la API mockeada.
