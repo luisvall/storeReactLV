@@ -17,7 +17,7 @@ export default function App() {
     <HomePage></HomePage>
       <Suspense fallback={<div>Loading...</div>}>
         <Router defaultComponent={DefaultComponent}>
-          <Route path="/" Component={HomePage} />
+          <Route path="/" Component={()=>{HomePage}} />
 
           {isLoged ? (
             <Route
@@ -37,7 +37,7 @@ export default function App() {
           <Route path="/contact/" Component={ContactPage} />
           <Route
             path="/login/"
-            Component={() => <LoginPage changeToken={setIsLoged} />}
+            Component={() => <LoginPage changeToken={()=> setIsLoged} />}
           />
         </Router>
       </Suspense>
