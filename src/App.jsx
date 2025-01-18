@@ -1,4 +1,4 @@
-import { lazy, Suspense, useState, useContext} from "react";
+import { lazy, Suspense, useState, useContext } from "react";
 import DefaultComponent from "./pages/404";
 import { Router } from "./router/Router";
 import Route from "./router/Route";
@@ -12,43 +12,40 @@ const LoginPage = lazy(() => import("./pages/LoginPage"));
 
 export default function App() {
   const licores = consumoApi()[1];
- const {isLoged} = useContext(LogContext)
+  const { isLoged } = useContext(LogContext);
   console.log(isLoged);
 
   return (
     <>
       <Suspense fallback={<div>Loading...</div>}>
         <Router defaultComponent={DefaultComponent}>
+          <Route type="Route" path="/storeReactLV/" Component={LoginPage} />
           <Route type="Route" path="/" Component={HomePage} />
           <Route type="Route" path="/contact" Component={ContactPage} />
-            {isLoged ? (
-              <Route
-                type="Route"
-                path="/store"
-                Component={() => {
-                  return (
-                    <CartProvider>
-                      <StorePage products={licores}></StorePage>
-                    </CartProvider>
-                  );
-                }}
-              />
-            ) : (
-              <DefaultComponent />
-            )}
-
+          {isLoged ? (
             <Route
               type="Route"
-              path="/login"
-              Component={LoginPage}
-            />
-            <button
-              onClick={() => {
-                setIsLoged(true);
+              path="/store"
+              Component={() => {
+                return (
+                  <CartProvider>
+                    <StorePage products={licores}></StorePage>
+                  </CartProvider>
+                );
               }}
-            >
-              revisar token
-            </button>
+            />
+          ) : (
+            <DefaultComponent />
+          )}
+
+          <Route type="Route" path="/login" Component={LoginPage} />
+          <button
+            onClick={() => {
+              setIsLoged(true);
+            }}
+          >
+            revisar token
+          </button>
         </Router>
       </Suspense>
     </>
