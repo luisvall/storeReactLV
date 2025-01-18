@@ -4,14 +4,15 @@ import "./index.css";
 import App from "./App";
 import NavBar from "./components/NavBar";
 import { FilterProvider } from "./components/storeComponents/FilterContext";
+import { LogProvider } from "./components/LogContext";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <>
+    <LogProvider>
       <NavBar></NavBar>
       <FilterProvider>
-      <App></App>
+        <App></App>
       </FilterProvider>
-    </>
+    </LogProvider>
   </StrictMode>
 );

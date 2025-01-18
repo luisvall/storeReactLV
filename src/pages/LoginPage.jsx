@@ -1,8 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useContext } from "react";
 import "./LoginPage.css";
 import { consumoApi } from "../components/api";
+import { LogContext } from "../components/LogContext";
 
-export default function LoginPage({changeToken}) {
+export default function LoginPage() {
+  const {setIsLoged} = useContext(LogContext)
   const usersAPI = consumoApi()[0];
 
   function handleSubmit(event) {
@@ -14,10 +16,10 @@ export default function LoginPage({changeToken}) {
     if(isAuthenticated){
       const pass = usersAPI.find( element => data.user).pass.toString() === data.pass;
       console.log(pass);
-      changeToken(pass);
+      setIsLoged(pass);
     } else {
       console.log("Usuario incorrecto");
-      changeToken(false)
+      setIsLoged(false)
     }
   }
 
@@ -52,7 +54,7 @@ export default function LoginPage({changeToken}) {
             />
           </div>
           <button>Iniciar sesión</button>
-          <button onClick={(event)=>{event.preventDefault() ;changeToken(false)}}>SALIR</button>
+          <button onClick={(event)=>{event.preventDefault() ;setIsLoged(false)}}>SALIR</button>
         </form>
       </div>
     </section>
