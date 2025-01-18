@@ -22,15 +22,14 @@ export function Router({
     };
   }, []);
   //Leer las rutas que vienen del children de un componente
-  const routesFromChildren = Children.map(children, ({ props, type }) => {
-    const { name } = type;
-    const isRoute = name === "Route";
-
+  const routesFromChildren = Children.map(children, ({ props }) => {
+    const { type } = props;
+    const isRoute = type === "Route";
     return isRoute ? props : null;
   });
   
-  const routesToUse = routes.concat(routesFromChildren);
+  const routesToUse = routes.concat(routesFromChildren).filter(Boolean);
   const Page = routesToUse.find(({ path }) => path === currentPath)?.Component;
-  console.log(routesToUse)
+  console.log(children)
   return Page ? <Page/> : <DefaultComponent />;
 }

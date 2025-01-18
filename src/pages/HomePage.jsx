@@ -1,5 +1,5 @@
 import { navegateFunction, Link } from "../router/Link";
-export default function HomePage(otherProps) {
+export default function HomePage() {
   return (
     <>
       <section className="section">

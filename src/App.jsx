@@ -12,16 +12,18 @@ const LoginPage = lazy(() => import("./pages/LoginPage"));
 export default function App() {
   const licores = consumoApi()[1];
   const [isLoged, setIsLoged] = useState(!true);
+  console.log(isLoged)
+
   return (
     <>
-    <HomePage></HomePage>
       <Suspense fallback={<div>Loading...</div>}>
         <Router defaultComponent={DefaultComponent}>
-          <Route path="/" Component={()=>{HomePage}} />
+          <Route type="Route" path="/" Component={HomePage} />
 
           {isLoged ? (
             <Route
-              path="/store/"
+              type="Route"
+              path="/store"
               Component={() => {
                 return (
                   <CartProvider>
@@ -34,10 +36,11 @@ export default function App() {
             <DefaultComponent />
           )}
 
-          <Route path="/contact/" Component={ContactPage} />
+          <Route type="Route" path="/contact" Component={ContactPage} />
           <Route
-            path="/login/"
-            Component={() => <LoginPage changeToken={()=> setIsLoged} />}
+            type="Route"
+            path="/login"
+            Component={() => <LoginPage changeToken={() => setIsLoged} />}
           />
         </Router>
       </Suspense>
