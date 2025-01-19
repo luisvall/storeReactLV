@@ -1,0 +1,9 @@
+.containerHome{
+    padding: 80px 0px;
+}
+
+@media (max-width:500px){
+    .containerHome{
+        padding: 60px 10px;
+    }
+}

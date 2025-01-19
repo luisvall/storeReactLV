@@ -73,3 +73,10 @@ border-radius: 4px;
     display: none;
   }
 }
+
+
+@media (max-width: 500px) {
+  .sliderImg:hover {
+    width: 250px;
+  }
+}

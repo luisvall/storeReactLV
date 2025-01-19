@@ -1,13 +1,14 @@
 
 import { Link } from "../router/Link";
 import Slider from "../components/Slider"
+import "./HomePage.css"
 
 export default function HomePage() {
   return (
     <>
       <section >
       <Slider></Slider>
-        <div className="container">
+        <div className="container containerHome">
 
           <h1>Deléitate con Nuestros Licores</h1>
           <br />
