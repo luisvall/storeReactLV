@@ -15,6 +15,8 @@ export default function Cart() {
         const newTotal = totales.reduce((n1, n2) => n1 + n2, 0);
         console.log(newTotal);
         setTotalCart(newTotal);
+      } else {
+        setTotalCart(0)
       }
     };
     restTotalCart();
