@@ -13,7 +13,7 @@
   width: 100%;
   text-align: center;
   transform: translateY(150px);
-  animation: bounce 5s forwards;
+  animation: bounce 3s forwards;
 }
 
 .sliderImg {
