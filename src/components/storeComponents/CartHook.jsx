@@ -8,5 +8,4 @@ export function useCartHook () {
         conosle.log('ERROR al usar CartContext')
     }
     
-    return cart
 }

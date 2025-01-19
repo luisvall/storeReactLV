@@ -6,7 +6,7 @@ export default function Slider () {
     return(
         <div className="slider">
             {carrousel.map(img => (
-                <img className='sliderImg' src={img.imagen} alt={img.titulo} key={img.titulo}/>
+                <div className='sliderImg'><img src={img.imagen} alt={img.titulo} key={img.titulo}/><span>{img.titulo}</span></div>
             ))}
             <span className='sliderSpan'>Loadin...</span>
         </div>
