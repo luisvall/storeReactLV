@@ -6,7 +6,7 @@ export default function DefaultComponent() {
         <div className="container">
         <h2>Necesitas iniciar sesión para ver los productos</h2>
         <p>usuario: elfar@edutecno.com, contraseña: 123</p>
-        <Link to={"/"}>Volver a la home</Link>
+        <Link to={"/login"}>ir al login</Link>
         </div>
       </section>
     </>

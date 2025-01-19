@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import "./ProductCard.css";
+import { CartContext } from "./CartContext";
 
 export default function ProductCard({ product, addCart}) {
+  const {restTotalCart, cart} = useContext(CartContext) 
   return (
     <>
       <div className="productCard">
@@ -12,7 +15,7 @@ export default function ProductCard({ product, addCart}) {
           <p className="productDesc">{product.descripcion}</p>
           <span className="productPrice">${product.precio} CLP</span>
         </div>
-        <button value={product.id} className="productBtn" onClick={() => addCart(product)}>
+        <button value={product.id} className="productBtn" onClick={() => {addCart(product)}}>
           COMPRAR
         </button>
       </div>

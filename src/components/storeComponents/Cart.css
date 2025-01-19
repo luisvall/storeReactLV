@@ -63,6 +63,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 100%;
 }
 
 .cartAside ul li{
@@ -79,7 +80,7 @@
 .cartAside ul li strong{
     grid-column: 1/3;
     text-align: left;
-    color: rgb(218, 218, 218);
+    color: rgb(196, 196, 196);
     font-size: 14px;
 }
 
@@ -95,8 +96,27 @@
     font-size: 14px;
 }
 
+.cartFooter{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px
+}
+
+
+.cartAside-cleanBtn{
+    font-size: 12px;
+    padding: 4px 8px;
+    background-color: #474747;
+    color: #c9c9c9;
+}
+
+.totalCart{
+    font-weight: 500;
+}
+
 @media (max-width:500px) {
     .cartBtn, .cartAside{
-        top: 100px;
+        top: 130px;
     }
 }

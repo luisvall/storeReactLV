@@ -16,7 +16,6 @@ export function consumoApi() {
           setUserApi(jsonRsp.usuarios);
           setProductApi(jsonRsp.licores);
           setBannerApi(jsonRsp.nosotros.carrousel);
-          console.log([userApi, productApi, bannerApi]);
       } catch (err) {
         console.log(err);
       }
