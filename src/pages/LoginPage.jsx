@@ -54,7 +54,7 @@ export default function LoginPage() {
             />
           </div>
           <button>Iniciar sesión</button>
-          <button onClick={(event)=>{event.preventDefault() ;setIsLoged(false)}}>SALIR</button>
+          <button className="loginExitBtn" onClick={(event)=>{event.preventDefault() ;setIsLoged(false)}}>Cerar sesión</button>
         </form>
       </div>
     </section>

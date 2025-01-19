@@ -56,3 +56,10 @@
     border-radius: 50%;
 
 }
+
+.loginExitBtn{
+    background: none;
+    text-decoration: underline;
+    color: rgb(24, 187, 187);
+    font-weight: 400;
+}

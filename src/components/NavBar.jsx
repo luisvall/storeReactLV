@@ -1,4 +1,5 @@
 import { Link } from "../router/Link";
+import { LogoIcon, CartIcon } from "./Icons"
 import "./NavBar.css";
 
 export default function NavBar() {
@@ -7,7 +8,7 @@ export default function NavBar() {
       <div className="containerNav">
         <ul className="mainNav">
           <li>
-            <Link to="/">LOGO</Link>
+            <Link to="/"><LogoIcon className='icon'/>REBIS</Link>
           </li>
           <li>
             <Link to="/store">Tienda</Link>

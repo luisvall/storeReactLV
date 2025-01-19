@@ -85,3 +85,10 @@ button:focus-visible {
   padding-top: 10px;
 }
 
+.icon{
+  height: 20px;
+  fill: #fff;
+  vertical-align: middle;
+  display: flex;
+  padding-right: 10px;
+}

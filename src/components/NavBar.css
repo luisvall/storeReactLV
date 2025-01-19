@@ -31,6 +31,7 @@
 }
 
 .navBar ul li a{
-    color: #fff;
+    color: #fff;    
+    display: flex;
 
 }

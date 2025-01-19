@@ -1,5 +1,6 @@
 import { useId, useContext, useState, useEffect } from "react";
 import { CartContext } from "./CartContext";
+import { CartIcon } from "../Icons";
 import "./Cart.css";
 //import { CartContext } from './cartContext'
 
@@ -24,7 +25,7 @@ export default function Cart() {
 
   return (
     <>
-      <label htmlFor={idCart} className="cartBtn"></label>
+      <label htmlFor={idCart} className="cartBtn"><CartIcon className='iconCart' /></label>
       <input
         type="checkbox"
         id={idCart}
