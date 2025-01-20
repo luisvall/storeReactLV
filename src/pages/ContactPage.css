@@ -1,0 +1,67 @@
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+}
+
+.contactDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contactLinks{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.contactLink{
+padding: 10px;
+border: 1px solid white;
+border-radius: 8px;
+transition: transform 1s;
+}
+
+.--gh, .--gh >*{
+    color: #59636e;
+    fill: #59636e;
+    background-color: aliceblue;
+}
+
+.--li, .--li >*{
+    color: #59636e;
+    fill: #59636e;
+    background-color: aliceblue;
+}
+
+.--pf , .--pf >*{
+    color: #59636e;
+    fill: #59636e;
+    background-color: aliceblue;
+}
+
+.contactLink:hover{
+    border: 1px solid #0969da;
+    color:#0969da;
+    fill:#0969da;
+    transform: scale(1.1);
+}
+
+@media (max-width:500px){
+    .contactLinks{
+        flex-direction: column;
+        padding-left: 10px;
+    }
+
+    .contactLink{
+        width: 170px;
+    }
+
+    .contactLinks .contactLink svg{
+        width: 35px;
+        padding: 0px;
+        margin-right: 8px;
+    }
+}

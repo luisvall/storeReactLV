@@ -89,6 +89,6 @@ button:focus-visible {
   height: 20px;
   fill: #fff;
   vertical-align: middle;
-  display: flex;
+  display: inline;
   padding-right: 10px;
 }
