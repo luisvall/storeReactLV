@@ -10,6 +10,9 @@ export default function Filters({ products }) {
     <>
       <section className="filters">
         <div className="container centerFlex pb30">
+        <button value="all" onClick={handleFilter} key="1000">
+            all
+          </button>
           {prs.map((pr, i) => {
             return (
               <button value={pr} onClick={handleFilter} key={i}>
@@ -17,9 +20,6 @@ export default function Filters({ products }) {
               </button>
             );
           })}
-          <button value="all" onClick={handleFilter} key="1000">
-            all
-          </button>
         </div>
       </section>
     </>

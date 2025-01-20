@@ -10,7 +10,6 @@ export function useCartHook() {
       const totales = cart.map((element) => element.precio * element.quantity);
       if (cart.length > 0) {
         const newTotal = totales.reduce((n1, n2) => n1 + n2, 0);
-        console.log(newTotal);
         setTotalCart(newTotal);
       } else {
         setTotalCart(0);

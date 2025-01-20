@@ -25,7 +25,6 @@ export function CartProvider({ children }) {
     const porductToDelete = cart.findIndex((item) => item.id === product.id)
     const newCartToDelete = structuredClone(cart)
 
-    console.log(newCartToDelete[porductToDelete])
     if (product.quantity > 1){
       newCartToDelete[porductToDelete].quantity--;
       setCart(newCartToDelete)
