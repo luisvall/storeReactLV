@@ -1,9 +1,7 @@
-import { useContext } from "react";
 import "./ProductCard.css";
-import { CartContext } from "./CartContext";
+
 
 export default function ProductCard({ product, addCart}) {
-  const {restTotalCart, cart} = useContext(CartContext) 
   return (
     <>
       <div className="productCard">

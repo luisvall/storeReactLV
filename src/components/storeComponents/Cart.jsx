@@ -1,27 +1,14 @@
-import { useId, useContext, useState, useEffect } from "react";
+import { useId, useContext } from "react";
 import { CartContext } from "./CartContext";
-import { CartIcon } from "../Icons";
+import { useCartHook } from "./CartHook";
+import { CartIcon, TrashIcon } from "../Icons";
 import "./Cart.css";
 //import { CartContext } from './cartContext'
 
 export default function Cart() {
   const idCart = useId();
-  const { cart, clearCart } = useContext(CartContext);
-  const [totalCart, setTotalCart] = useState(0);
-
-  useEffect(() => {
-    const restTotalCart = () => {
-      const totales = cart.map((element) => element.precio * element.quantity);
-      if (cart.length > 0) {
-        const newTotal = totales.reduce((n1, n2) => n1 + n2, 0);
-        console.log(newTotal);
-        setTotalCart(newTotal);
-      } else {
-        setTotalCart(0)
-      }
-    };
-    restTotalCart();
-  }, [cart]);
+  const { cart, clearCart, DtlProduct } = useContext(CartContext);
+  const totalCart = useCartHook()
 
   return (
     <>
@@ -41,6 +28,7 @@ export default function Cart() {
               <span className="cartItem-price">${product.precio}</span>
               <div className="cartQtyContainer">
                 <span>cant {product.quantity}</span>
+                <button className="cartQtyBtn" onClick={()=>{DtlProduct(product)}}><TrashIcon className='iconDlt'/></button>
               </div>
             </li>
           ))}

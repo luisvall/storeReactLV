@@ -1,11 +1,23 @@
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import { CartContext } from "./CartContext";
 
-export function useCartHook () {
-    const cartContext = useContext(CartContext)
+export function useCartHook() {
+  const { cart } = useContext(CartContext);
+  const [totalCart, setTotalCart] = useState(0);
 
-    if (cartContext === undefined){
-        conosle.log('ERROR al usar CartContext')
-    }
-    
+  useEffect(() => {
+    const restTotalCart = () => {
+      const totales = cart.map((element) => element.precio * element.quantity);
+      if (cart.length > 0) {
+        const newTotal = totales.reduce((n1, n2) => n1 + n2, 0);
+        console.log(newTotal);
+        setTotalCart(newTotal);
+      } else {
+        setTotalCart(0);
+      }
+    };
+    restTotalCart();
+  }, [cart]);
+
+  return totalCart
 }

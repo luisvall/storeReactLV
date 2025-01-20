@@ -21,12 +21,27 @@ export function CartProvider({ children }) {
     setCart([]);
   };
 
+  const DtlProduct = (product) => {
+    const porductToDelete = cart.findIndex((item) => item.id === product.id)
+    const newCartToDelete = structuredClone(cart)
+
+    console.log(newCartToDelete[porductToDelete])
+    if (product.quantity > 1){
+      newCartToDelete[porductToDelete].quantity--;
+      setCart(newCartToDelete)
+    } else {
+      newCartToDelete.splice(porductToDelete,1)
+      setCart(newCartToDelete)
+    }
+  }
+
   return (
     <CartContext.Provider
       value={{
         cart,
         addCart,
         clearCart,
+        DtlProduct,
       }}
     >
       {children}
