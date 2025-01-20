@@ -1,0 +1,9 @@
+.footerMain{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 4vh;
+    gap:8px
+}

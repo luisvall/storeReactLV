@@ -6,7 +6,7 @@ import "./HomePage.css"
 export default function HomePage() {
   return (
     <>
-      <section >
+      <section className="section sectionHome" >
       <Slider></Slider>
         <div className="container containerHome">
 

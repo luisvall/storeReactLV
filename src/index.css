@@ -60,6 +60,7 @@ button:focus-visible {
   width: 100%;
   padding: 60px 0px;
   padding-top: 100px;
+  height: 96vh;
 }
 
 
