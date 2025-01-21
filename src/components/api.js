@@ -11,7 +11,7 @@ export function consumoApi() {
   useEffect(() => {
     async function apiResponse() {
       try {
-        const resp = await fetch("https://apimocha.com/produclicores/posts");
+        const resp = await fetch("https://apimocha.com/productslv/posts");
         const jsonRsp = await resp.json();
           setUserApi(jsonRsp.usuarios);
           setProductApi(jsonRsp.licores);
