@@ -1,58 +1,19 @@
-import { createContext, useState } from "react";
+import { createContext, useReducer, useState } from "react";
+import { reduce } from "./CartHook";
 
 export const CartContext = createContext();
 
-const initialState = [];
-const reduce = (state, action) => {
-  switch (action.type) {
-    case "add_to_cart": {
-      console.log("Agregando");
-    }
-    case "remove_to_cart": {
-      console.log("Eliminando");
-    }
-    case 'clean_cart': {
-      console.log('Limpiando')
-    }
-  }
-};
-
 export function CartProvider({ children }) {
-  const [cart, setCart] = useState([]);
+ const [state, dispatch] = useReducer(reduce, [])
 
-  const addCart = (product) => {
-    const productInCartIndex = cart.findIndex((item) => item.id === product.id);
-
-    if (productInCartIndex >= 0) {
-      const newCart = structuredClone(cart);
-      newCart[productInCartIndex].quantity += 1;
-      return setCart(newCart);
-    } else {
-      setCart((prevState) => [...prevState, { ...product, quantity: 1 }]);
-    }
-  };
-
-  const clearCart = () => {
-    setCart([]);
-  };
-
-  const DtlProduct = (product) => {
-    const porductToDelete = cart.findIndex((item) => item.id === product.id);
-    const newCartToDelete = structuredClone(cart);
-
-    if (product.quantity > 1) {
-      newCartToDelete[porductToDelete].quantity--;
-      setCart(newCartToDelete);
-    } else {
-      newCartToDelete.splice(porductToDelete, 1);
-      setCart(newCartToDelete);
-    }
-  };
-
+ const addCart = product => dispatch({type:"ADD_TO_CART", payload: product});
+ const clearCart = () => dispatch({type:"CLEAN_CART"});
+ const DtlProduct = product => dispatch({type:"DLT_TO_CART", payload: product});
+ 
   return (
     <CartContext.Provider
       value={{
-        cart,
+        cart: state,
         addCart,
         clearCart,
         DtlProduct,

@@ -17,6 +17,48 @@ export function useCartHook() {
     };
     restTotalCart();
   }, [cart]);
-
-  return totalCart
+  return totalCart;
 }
+
+export const reduce = (state, action) => {
+  const { type: actionType, payload: actionPayload } = action;
+  switch (actionType) {
+    case "ADD_TO_CART": {
+      const productInCartIndex = state.findIndex(
+        (item) => item.id === actionPayload.id
+      )
+      if (productInCartIndex >= 0) {
+        const newCart = structuredClone(state);
+        newCart[productInCartIndex].quantity += 1;
+        return newCart;
+      } else {
+        const product = { ...actionPayload, quantity: 1 };
+        return [...state, product];
+      }
+    }
+
+    case "CLEAN_CART": {
+      return [];
+    }
+
+    case "DLT_TO_CART": {
+      const productInCartIndex = state.findIndex(
+        (item) => item.id === actionPayload.id
+      )
+      if (actionPayload.quantity > 1){
+        const newCart = structuredClone(state)
+        newCart[productInCartIndex].quantity -= 1;
+        console.log(state)
+        return newCart;
+      } else {
+        const newCartToDelete = state.filter(
+          (item) => item.id !== actionPayload.id
+        );
+        console.log(state)
+        return newCartToDelete;
+      }
+    }
+    default:
+      return state;
+  }
+};

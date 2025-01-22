@@ -1,7 +1,10 @@
+import { useContext } from "react";
+import { CartContext } from "./CartContext";
 import "./ProductCard.css";
 
 
-export default function ProductCard({ product, addCart}) {
+export default function ProductCard({ product}) {
+  const {addCart} = useContext(CartContext)
   return (
     <>
       <div className="productCard">
